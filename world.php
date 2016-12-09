@@ -1,5 +1,8 @@
 <?php
 
+$name = $_GET["name"];   
+
+
 $host = getenv('IP');
 $username = getenv('C9_USER');
 $password = '';
