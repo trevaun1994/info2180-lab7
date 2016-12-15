@@ -1,12 +1,12 @@
-window.onload=function(){
-	document.getElementById("lookup").onclick= search();
-}
+document.getElementById("lookup").addEventListener("click", function(){
+    search();
+});
 
 function search(){              
-	var username = $("#lookup").val();
-	$.get("world.php", {username:username, password:password}, function(response){
+	var name = $("#country").val();
+	$.get("world.php", {name:name}, function(response){
 	    
-	    document.getElementById("result").innerHTML(response);
+	    document.getElementById("result").innerHTML = response;
 	});
     
 } 
